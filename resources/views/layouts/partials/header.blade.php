@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-3">
                         <a href="/" id="logo">
-                            <img src="https://www.bryzarowy.pl/public/gfx/template/logo.png" alt="{{ settings()->get("page_title") }}">
+                            <img src="{{ asset('images/logo.png') }}" alt="{{ settings()->get("page_title") }}">
                         </a>
                     </div>
                     <div class="col-9">

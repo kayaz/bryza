@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="flogo text-center">
                         <a href="https://www.bryzarowy.pl/">
-                            <img src="https://www.bryzarowy.pl/public/gfx/template/logo-bryza-stopka.png" alt="">
+                            <img src="{{ asset('images/logo-bryza-stopka.png') }}" alt="{{ settings()->get("page_title") }}">
                         </a>
                     </div>
                 </div>
