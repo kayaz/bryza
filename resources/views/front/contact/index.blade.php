@@ -3,11 +3,9 @@
 @section('meta_title', 'Kontakt')
 @section('seo_title', '')
 @section('seo_description', '')
-
 @section('pageheader')
     @include('layouts.partials.page-header', ['title' => 'Kontakt', 'header_file' => 'pageheader.jpg'])
 @stop
-
 @section('content')
     <div id="page-content" class="page-content page-{{$page->slug}}">
         <div class="container">
