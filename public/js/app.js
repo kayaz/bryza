@@ -55,6 +55,11 @@ function closeNav() {
 
 $(document).ready(function(){
 
+    $("#triggermenu").click(function(b){
+        b.preventDefault();
+        $('body').toggleClass('openmenu');
+    });
+
 // Menu
     jQuery(".header-holder").height(jQuery("#header").outerHeight());
     var aboveHeight = $('#header').outerHeight();

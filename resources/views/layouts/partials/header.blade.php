@@ -3,12 +3,12 @@
         <div id="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-6 col-lg-2 col-xl-3 d-flex justify-content-start align-items-center">
                         <a href="/" id="logo">
                             <img src="{{ asset('images/logo.png') }}" alt="{{ settings()->get("page_title") }}">
                         </a>
                     </div>
-                    <div class="col-9">
+                    <div class="col-6 col-lg-10 col-xl-9">
                         <nav>
                             <ul class="mb-0 list-unstyled mainmenu">
                                 <li><a href="/">Strona główna</a></li>
@@ -20,7 +20,7 @@
                                 <li class="{{ isset($page) && $page->uri == 'rezerwacja' ? 'active' : '' }}"><a href="/rezerwacja/">Rezerwacja</a></li>
                                 <li class="{{ isset($page) && $page->uri == 'kontakt' ? 'active' : '' }}"><a href="/kontakt/">Kontakt</a></li>
                             </ul>
-                            <a href="#" class="menu-menu">Menu</a>
+                            <a href="#" id="triggermenu" class="menu-menu">Menu</a>
                         </nav>
                     </div>
                 </div>

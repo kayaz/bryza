@@ -2040,6 +2040,10 @@ p .doc:before {
   font-weight: normal;
   font-size: 19px;
 }
+.menu-menu:hover {
+  background: #176891;
+  color: white;
+}
 .menu-menu:before {
   font-family: 'FontAwesome';
   margin-right: 8px;
@@ -2290,9 +2294,26 @@ p .doc:before {
   #osrodek .grid_6 img {
     margin: 0 auto 30px;
   }
+  header nav ul {
+    display: none;
+    position: fixed;
+    top: 69px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    z-index: 999;
+  }
+  .openmenu header nav ul {
+    display: block;
+  }
+  table.cennik,
+  table.cennik.cennik-long {
+    width: 90%;
+  }
   .mainmenu a,
   .fixed .mainmenu a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 7px 0;
     margin: 7px 15px;
   }
@@ -2438,6 +2459,11 @@ p .doc:before {
   .box {
     width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 1199.98px) {
+  #header .container {
+    max-width: 100%;
   }
 }
 .la,

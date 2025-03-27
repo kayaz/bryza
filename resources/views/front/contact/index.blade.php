@@ -12,12 +12,12 @@
     <div id="page-content" class="page-content page-{{$page->slug}}">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-12 col-xl-5">
                     <h2>DANE KONTAKTOWE</h2>
                     {!! parse_text($page->content) !!}
                 </div>
-                <div class="col-7">
-                    <div class="ps-5">
+                <div class="col-12 col-xl-7">
+                    <div class="ps-0 ps-xl-5">
                         <h2>FORMULARZ KONTAKTOWY</h2>
                         <p>Jeżeli są Państwo zainteresowani kontaktem z nami, prosimy o przesłanie wiadomości.</p>
                         <form method="post" id="contact-form" action="{{ route("contact.form") }}" class="validateForm">
@@ -93,7 +93,7 @@
                                     <div class="form-input mb-0 textarea">
                                         <input name="page" type="hidden" value="Formularz kontaktowy">
                                         <script type="text/javascript">
-                                            document.write("<button type=\"submit\">WYŚLIJ WIADOMOŚĆ</button>");
+                                            document.write("<button type=\"submit\" class=\"g-recaptcha\" data-sitekey=\"{{ config('services.recaptcha_v3.siteKey') }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">WYŚLIJ WIADOMOŚĆ</button>");
                                         </script>
                                         <noscript><b>Do poprawnego działania, Java musi być włączona.</b></noscript>
                                     </div>
@@ -115,14 +115,24 @@
 @push('scripts')
     <script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
                 validateNonVisibleFields: true,
                 updatePromptsPosition:true,
-                promptPosition : "topRight:-137px"
+                promptPosition : "topRight:-137px",
+                autoPositionUpdate: false
             });
         });
+
+        function onRecaptchaSuccess(token) {
+            $(".validateForm").validationEngine('updatePromptsPosition');
+            const isValid = $(".validateForm").validationEngine('validate');
+            if (isValid) {
+                $("#contact-form").submit();
+            }
+        }
         @if (session('success')||session('warning'))
         $(window).load(function() {
             const aboveHeight = $('header').outerHeight();

@@ -52,7 +52,7 @@
                 @endauth
             </div>
             <div class="row">
-                <div class="col-4 inline inline-tc">
+                <div class="col-12 col-lg-4 inline inline-tc">
                     <div class="oferta-boks p-3">
                         <img src="{{ getInline($array, 4, 'file') }}" alt="{{ getInline($array, 4, 'file_alt') }}" data-img="4" class="w-100">
                         <div>
@@ -64,7 +64,7 @@
                         <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="4" data-hideinput="modaleditortext,modallink,modallinkbutton" data-method="update" data-imgwidth="370" data-imgheight="180"></button></div>
                     @endauth
                 </div>
-                <div class="col-4 inline inline-tc">
+                <div class="col-12 col-lg-4 inline inline-tc">
                     <div class="oferta-boks d-flex flex-wrap p-3">
                         <img src="{{ getInline($array, 5, 'file') }}" alt="{{ getInline($array, 5, 'file_alt') }}" data-img="5" class="w-100 order-2">
                         <div class="order-1 w-100">
@@ -76,7 +76,7 @@
                         <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="5" data-hideinput="modaleditortext,modallink,modallinkbutton" data-method="update" data-imgwidth="370" data-imgheight="180"></button></div>
                     @endauth
                 </div>
-                <div class="col-4 inline inline-tc">
+                <div class="col-12 col-lg-4 inline inline-tc">
                     <div class="oferta-boks p-3">
                         <img src="{{ getInline($array, 6, 'file') }}" alt="{{ getInline($array, 6, 'file_alt') }}" data-img="6" class="w-100">
                         <div class="div">
@@ -104,56 +104,56 @@
     <div id="atuty">
         <div class="container">
             <div class="row">
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-1">
                         <i class="las la-wifi"></i>
                         <h3>Darmowe wifi</h3>
                         <p>Internet bezprzewodowy Wi-Fi na terenie ośrodka</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-2">
                         <i class="las la-tv"></i>
                         <h3>Media</h3>
                         <p>Dostęp do telewizji kablowej w każdym pokoju</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-3">
                         <i class="las la-swimming-pool"></i>
                         <h3>Plaża</h3>
                         <p>Tylko 500 m spacerem przez piękny sosnowy las.</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-4">
                         <i class="las la-campground"></i>
                         <h3>Pole namiotowe</h3>
                         <p>Oferujemy miejsca pod namioty, przyczepy i samochody campingowe</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-5">
                         <i class="las la-bicycle"></i>
                         <h3>Wypoczynek</h3>
                         <p>Możliwość skorzystania z wypożyczalni rowerów i sprzętu plażowego</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-6">
                         <i class="las la-utensils"></i>
                         <h3>Wyżywienie</h3>
                         <p>W cenie oferujemy całodzienne wyżywienie (śniadanie, obiad, kolacja)</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-7">
                         <i class="las la-car"></i>
                         <h3>Parking</h3>
                         <p>Dla naszych gości posiadamy płatny ogrodzony parking.</p>
                     </div>
                 </div>
-                <div class="col-3 p-0">
+                <div class="col-6 col-sm-4 col-lg-3 p-0">
                     <div class="box box-8">
                         <i class="las la-building"></i>
                         <h3>Pokoje</h3>
@@ -173,11 +173,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <img src="{{ getInline($array, 1, 'file') }}" alt="{{ getInline($array, 1, 'file_alt') }}" data-img="1" class="w-100">
                 </div>
-                <div class="col-6 d-flex align-items-center">
-                    <div class="ps-4" data-modaleditortext="1">
+                <div class="col-12 col-lg-6 d-flex align-items-center">
+                    <div class="ps-0 ps-lg-4 mt-4 mt-lg-0" data-modaleditortext="1">
                         {!! getInline($array, 1, 'modaleditortext') !!}
                     </div>
                 </div>
